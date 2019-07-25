@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Linnea's Hotel</title>
+  <style>
+
+    body {
+      background-color: #BC8F8F;
+      font: 14px arial, sans-serif;
+      text-align: center;
+      min-width: 300px;
+    }
+
+
+    .small_heading {
+      font-weight: bold;
+      display: inline-block;
+      text-align: right;
+      width: 40%;
+      padding: 1%;
+      vertical-align: top;
+      margin-top: 2.5%;
+    }
+
+    .rightside {
+      display: inline-block;
+      text-align: left;
+      width: 50%;
+      vertical-align: middle;
+    }
+
+    .input-field {
+      height: 15px;
+      width: 80%;
+      padding: 2%;
+      margin: 4%;
+      border: 1px solid #c0c0c0;
+      border-radius: 4px;
+    }
+
+    .radio, .checkbox {
+      position: relative;
+      left: 0px;
+      margin-right: 2%;
+      display: block;
+      padding-bottom: 1%;
+    }
+
+    
+    #all_form {
+      margin: 0 auto;
+      border-radius: 2%;
+      width: 75%;
+      max-width: 90%;
+      padding: 2%;
+      padding-top: 4%;
+      background: #d1e0e0
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .dropdown {
+      height: 15px;
+      width: 40%;
+      padding: 3%;
+      margin: 4%;  
+      margin-top: 7%;
+      border: 1px solid #c0c0c0;
+      border-radius: 4px;
+    }
+
+    #textarea {
+      border-radius: 4px;
+    }
+
+    #submit {
+      background-color: #8f6d99;
+      border-radius: 4px;
+      color: white;
+      font-size: 1em;
+      height: 30px;
+      width: 25%;
+      margin: 1.5%;
+      border: 0px solid;
+      position: relative;
+      left: 41.5%;
+    }
+
+
+    @media screen and (max-width: 833px) {
+      .input-field {
+        width: 80%;
+      }
+      select {
+        width: 90%;
+      }
+    }
+
+    @media screen and (max-width: 520px) {
+      .small_heading {
+        width: 100%;
+        float: left;
+      }
+      .rightside {
+        width: 70%;
+        float: left;
+      }
+      .input-field {
+        width: 100%;
+      }
+      select {
+        width: 100%;
+      }
+      
+      }
+      .logo {
+        float: left;
+        left: 20%;
+        width:7%;
+        height: 6%;  
+      }
+
+      #title {
+        position: relative;
+        top: 18px;
+        left: 10px; 
+      }
+
+     
+  </style>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" id="image" src="house-drawing.png" alt="Picture of house">
+      <h1 id="title">Linnea's Hotel Survey Form</h1>
+    </div>
+    <br>
+    <div id="all_form">
+
+      <p id="description">
+      <strong>Please fill out information below:</strong>
+      </p>
+      <br><br>
+      <form id="survey-form">
+        <div class="small_heading">
+          <label id="name-label">Name:
+          </label>
+        </div>
+        <div class="rightside">
+          <input class="input-field" id="name" type="text" required placeholder="Please enter your name">
+        </div>
+
+        <div class="small_heading">
+          <label id="email-label">Email:
+          </label>
+        </div>
+        <div class="rightside">
+        <input class="input-field"  id="email" type="email" required placeholder="Please enter your email">
+        </div>
+
+        <div class="small_heading">
+          <label id="number-label">Age:
+          </label>
+        </div>
+        <div class="rightside">
+          <input class="input-field"  id="number" type="number" required min="18" max="90" placeholder="Please enter your age" >
+        </div>
+
+        <div class="small_heading">
+          <label id="visit_again">Would you visit Linnea's Hotel again?:
+          </label>
+        </div>
+        <div class="rightside">
+          <select class="dropdown" id="dropdown">
+            <option value="ja">Yes</option>
+            <option value="maybe">Maybe</option>
+            <option value="nej">No</option>
+          </select>
+        </div>
+
+        <div class="small_heading">
+          <label id="clean-label">Level of cleaniness:
+          </label>
+        </div>
+        <div class="rightside"> 
+          <br><br>
+          <label class="radio"><input type="radio" name="clean" value="very_clean" checked> Very Clean</label>
+          <label class="radio"><input type="radio" name="clean" value="decent"> Decent</label>
+          <label class="radio"><input type="radio" name="clean" value="disgusting"> Disgusting </label>
+        </div>
+
+        <div class="small_heading">
+          <label id="noise-label">Noise level:
+          </label>
+        </div>
+        <div class="rightside">
+          <br><br>
+          <label class="radio"><input type="radio" name="noise" value="super_silent" checked> Super silent</label>
+          <label class="radio"><input type="radio" name="noise" value="acceptable"> Acceptable</label>
+          <label class="radio"><input type="radio" name="noise" value="noisy"> Noisy</label>
+        </div>
+
+        <div class="small_heading">
+          <label id="food">Breakfast:
+          </label>
+        </div>
+        <div class="rightside">
+          <br><br>
+          <label class="checkbox"><input type="checkbox"name="breakfast" value="amazing"> Amazing - best breakfast ever!</label>
+          <label class="checkbox"><input type="checkbox" name="breakfast" value="bad_eggs"> Ok, but the eggs were over cooked</label>
+          <label class="checkbox"><input type="checkbox" name="breakfast" value="gross"> Canned food would have been better!</label>
+        </div>
+        <br><br>
+        <div class="small_heading">
+          <label id="text_field">Other comments:
+          </label>
+        </div>
+          <div class="rightside">
+          <textarea id="textarea"rows="4%" cols="30%"></textarea> </div>
+        <div class="rightside">
+          <button id="submit" type="submit">Submit</button>
+        </div>
+    </form>
+  </div>
+  <div id="app"></div>
+  <!-- For testing  -->
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+</html>
